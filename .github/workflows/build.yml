@@ -18,6 +18,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Generate Release Keystore
+        run: |
+          keytool -genkeypair -v -keystore app/jrweb_release.jks -alias jrweb_key -keyalg RSA -keysize 2048 -validity 10000 -storepass "JRweb@2026" -keypass "JRweb@2026" -dname "CN=JRweb, OU=Development, O=JRweb, L=Tehran, ST=Tehran, C=IR"
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
