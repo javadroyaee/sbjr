@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_navy">#211A52</color>
+    <color name="accent_orange">#FF8C00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="deposit_bg">#E8F5E9</color>
+    <color name="deposit_border">#2E7D32</color>
+    <color name="deposit_text">#1B5E20</color>
+    <color name="withdraw_bg">#FFEBEE</color>
+    <color name="withdraw_border">#C62828</color>
+    <color name="withdraw_text">#B71C1C</color>
+</resources>

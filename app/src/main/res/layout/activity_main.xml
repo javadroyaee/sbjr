@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F6FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تراکنش‌نما (مدیریت پیامک بانکی)"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_navy"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="وضعیت مجوزها: در حال بررسی..."
+            android:textSize="13sp"
+            android:textColor="#444444"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- کارت آمار روزانه -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:id="@+id/tvDailyStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="آمار امروز:\nواریز: ۰ تومان  |  برداشت: ۰ تومان"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_navy"
+                android:gravity="center"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnResetDaily"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:text="صفر کردن آمار امروز"
+                android:textSize="12sp"
+                android:backgroundTint="#607D8B"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGrantPermissions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="فعال‌سازی مجوزها و سرویس پس‌زمینه"
+            android:backgroundTint="@color/primary_navy"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- افزودن سرشماره دستی -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="14dp"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="افزودن دستی سرشماره بانک جدید:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etCustomSender"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:hint="مثلاً: 9830001234 یا BankSina"
+                    android:textSize="13sp"
+                    android:padding="10dp"
+                    android:background="#EEEEEE" />
+
+                <Button
+                    android:id="@+id/btnAddSender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:text="افزودن"
+                    android:backgroundTint="@color/accent_orange"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCustomSendersList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="سرشماره‌های افزوده شده: ندارد"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- دکمه‌های تست -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnTestDeposit"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="تست واریز (سبز)"
+                android:textSize="13sp"
+                android:backgroundTint="@color/deposit_border"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnTestWithdraw"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="تست برداشت (قرمز)"
+                android:textSize="13sp"
+                android:backgroundTint="@color/withdraw_border"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="بدست JRweb.ir"
+            android:textSize="13sp"
+            android:textColor="#777777"
+            android:gravity="center"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</ScrollView>
