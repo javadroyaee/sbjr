@@ -1,4 +1,4 @@
-﻿package ir.jrweb.trakonesh
+package ir.jrweb.trakonesh
 
 import android.Manifest
 import android.content.Intent
@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             perms.add(Manifest.permission.POST_NOTIFICATIONS)
         }
-        ActivityCompat.requestPermissions(this, perms, 101)
+        ActivityCompat.requestPermissions(this, perms.toTypedArray(), 101)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
             val intent = Intent(
